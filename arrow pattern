@@ -1,0 +1,42 @@
+from turtle import *
+import random
+
+tom = Turtle()
+tom.shape('turtle')
+tom.speed(100)
+tom.color('red')
+tom.tracer(2200)
+tom.width(1)
+
+colorBox=['green','yellow','blue','purple','red','dodgerblue','darkturquoise','gold','brown','coral','grey']
+
+def arrow():
+    tom.rt(45)
+    tom.fd(64)
+    tom.lt(135)
+    tom.fd(20)
+    tom.rt(90)
+    tom.fd(50)
+    tom.lt(90)
+    tom.fd(50)
+    tom.lt(90)
+    tom.fd(50)
+    tom.rt(90)
+    tom.fd(20)
+    tom.lt(135)
+    tom.fd(65)
+am = 90
+def arrowcall(d):
+    tom.color(random.choice(colorBox))
+    for p in range(am):
+        tom.pu()
+        tom.fd(d)
+        tom.pd()
+        arrow()
+        tom.pu()
+        tom.rt(45)
+        tom.fd(d)
+        tom.pd()
+        tom.rt(360/am)
+for i in range(1500):
+    arrowcall(i*5)
