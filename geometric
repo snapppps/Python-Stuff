@@ -1,0 +1,31 @@
+from turtle import*
+import random
+
+tom = Turtle()
+tom.shape('turtle')
+tom.speed(0)
+tom.tracer(200)
+tom.pu()
+tom.goto(0,-450)
+tom.pd()
+tom.width(5000)
+tom.color('white')
+for i in range(4):
+    tom.fd(100)
+    tom.lt(90)
+tom.width(1)
+
+tom.color('aqua')
+colorBox=['green','yellow','blue','purple','red','dodgerblue','darkturquoise','gold','brown','coral','grey','#000080','aqua','rgb(60,179,113)','rgb(32,178,170)','rgb(192,192,192)']
+def draw(s,n):
+    sum=3
+    
+    for r in range(n):
+        tom.color(random.choice(colorBox))
+        for i in range(sum):
+            tom.color(random.choice(colorBox))
+            tom.fd(s)
+            tom.lt(360.0/sum)
+        sum=sum+1
+        tom.setheading(0)
+draw(5,2100)
