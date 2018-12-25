@@ -1,0 +1,61 @@
+import random
+
+tom = Turtle()
+tom.shape('turtle')
+tom.tracer(30)
+tom.color('#FFF','#000080')
+tom.pu()
+tom.goto(0,0)
+tom.pd()
+colorBox=['green','yellow','blue','purple','red','dodgerblue','darkturquoise','gold','brown','coral','grey','#000080']
+
+fi = [0,1]
+e=29
+
+for i in range(15):
+    fi.append(fi[i]+fi[i+1])
+	
+print fi
+
+
+for g in range(e):    
+    tom.color(random.choice(colorBox))
+    for g in range(4):
+        for p in range(2):
+            for k in range(4):
+                tom.fd(100)
+                tom.lt(90)
+            tom.circle(51,180)
+            tom.fd(-100)
+            tom.circle(51,180)
+            tom.lt(90)
+        tom.rt(90)
+        tom.fd(100)
+    tom.lt(90)
+    tom.circle(200,90)
+    for h in range(3):
+        tom.lt(90)
+        tom.fd(100)
+        tom.lt(90)
+        tom.circle(200,90)
+    for j in range(4):
+        tom.color(random.choice(colorBox))
+        for p in range(2):
+            for g in range(4):
+                tom.fd(100)
+                tom.lt(90)
+            tom.circle(51,180)
+            tom.fd(-100)
+            tom.circle(51,180)
+            tom.lt(90)
+        tom.pu()
+        tom.rt(90)
+        tom.fd(100)
+        tom.lt(90)
+        tom.fd(200)
+        tom.pd()
+        tom.rt(90)
+    
+    tom.lt(90)
+    tom.fd(100)
+    tom.lt(360.0/e)
